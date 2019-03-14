@@ -1,12 +1,59 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  
+  <ion-grid>
+    <!-- QPI Displate -->
+    <ion-row class="qpi-display">
+      <ion-col>
+        <ion-label> QPI <br /></ion-label>
+        <ion-label style="font-size: 9em;">
+          <!-- Template to display variables -->
+          {{ totalQPI | number : '1.2-2' }}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <!-- History Display -->
+    <ion-label> History </ion-label>
+    <ion-row class="history-display">
+      <ion-label> {{ history }}</ion-label>
+    </ion-row>
+
+    <!-- Letter Grades -->
+    <ion-row class="letter-display">
+
+      <ion-row>
+        <ion-col>
+          <ion-button shape="round" color="dark" class="keys" (click)="append(4)">A</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="dark" class="keys" (click)="append(3.5)">B+</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="dark" class="keys" (click)="append(3)">B</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-button shape="round" color="dark" class="keys" (click)="append(2.5)">C+</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" color="dark" class="keys" (click)="append(2)">C</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" color="dark" class="keys" (click)="append(1)">D</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <ion-button shape="round" color="dark" class="keys" (click)="append(0)">F/FD</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button shape="round" color="danger" class="keys" (click)="clear()">CLR</ion-button>
+            </ion-col>
+          </ion-row>
+
+    </ion-row>
+    
+  </ion-grid>
+
 </ion-content>

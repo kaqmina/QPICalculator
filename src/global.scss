@@ -9,3 +9,39 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+// import font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+ion-content {
+    font-family: 'Montserrat';
+    padding: 0px;
+}
+
+ion-grid {
+    height: 100%;
+    font-weight: bold;
+    margin: 20px;
+    color: white;
+    text-align: center;
+
+    .qpi-display {
+        height: 30%;
+    }
+
+    .history-display {
+        height: 20%;
+        overflow-y: scroll;
+        padding-top: 5px;
+        font-weight: normal;
+    }
+
+    .key-display {
+        height: 50%;
+    }
+}
+
+.keys {
+    width: 75px;
+    height: 75px;
+}
